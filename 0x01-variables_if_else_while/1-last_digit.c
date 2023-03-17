@@ -17,13 +17,13 @@ int main(void)
 	lastDigit = n % 10;
 	if (lastDigit > 0)
 	{
-		printf("Last digit of %d\n", lastDigit);
+		printf("Last digit of %d is %d\n", n, lastDigit);
 	} else if (n == 0)
 	{
-		printf("Last digit of %d\n", lastDigit);
+		printf("Last digit of %d is %d\n", n, lastDigit);
 	} else
 	{
-		printf("Last digit of %d\n", lastDigit);
+		printf("Last digit of %d is %d\n", n, lastDigit);
 	}
 	return (0);
 }
