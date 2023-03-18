@@ -12,7 +12,7 @@ int main(void)
 	char lowerAlphabets[26];
 	int i;
 
-	lowerAlphabets = "abcdefghijklmnopqrstuvwxyz";
+	lowerAlphabets[26] = "abcdefghijklmnopqrstuvwxyz";
 	for (i = 0; i < 26; i++)
 		putchar(lowerAlphabets[i]);
 	return (0);
