@@ -9,10 +9,11 @@
  */
 int main(void)
 {
-	char lowerAlphabets[];
+	char lowerAlphabets[26];
+	int i;
 
 	lowerAlphabets = "abcdefghijklmnopqrstuvwxyz";
-	for (int i = 0; i < 26; i++)
-		putchar("%c", lowerAlphabets[i]);
+	for (i = 0; i < 26; i++)
+		putchar(lowerAlphabets[i]);
 	return (0);
 }
