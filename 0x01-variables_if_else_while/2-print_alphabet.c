@@ -1,19 +1,28 @@
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
-
 /**
- * main - Entry point
+ *main - Entry point
  *
- * Return: Always 0 (Success)
+ *Return: Always 0 (Success)
  */
 int main(void)
 {
-	char lowerAlphabets[26];
-	int i;
+	char c = 'a';
 
-	lowerAlphabets[26] = "abcdefghijklmnopqrstuvwxyz";
-	for (i = 0; i < 26; i++)
-		putchar(lowerAlphabets[i]);
+	while (c <= 'z')
+	{
+		putchar(c);
+		c++;
+	}
+
+	c = 'A';
+
+	while (c <= 'Z')
+	{
+		putchar(c);
+		c++;
+	}
+
+	putchar('\n');
+
 	return (0);
 }
