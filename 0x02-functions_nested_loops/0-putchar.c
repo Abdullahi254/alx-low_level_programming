@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include <string.h>
 #include "main.h"
 /**
  * main - Entry point
@@ -9,9 +8,8 @@
 int main(void)
 {
 	int i;
-	char myString[15];
+	char myString[15] = "_putchar";
 
-	strcpy(myString, "_putchar");
 	for (i = 0; i < 8; i++)
 	{
 		putchar(myString[i]);
