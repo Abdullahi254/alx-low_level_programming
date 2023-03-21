@@ -1,19 +1,20 @@
-#include<stdio.h>
 #include "main.h"
+#include <stdio.h>
 /**
- * main - Entry point
+ *main - Entry Point
  *
- * Return: Always 0 (Success)
+ *Return: Always 0 (Success)
  */
 int main(void)
 {
-	int i;
-	char myString[15] = "_putchar";
+	int c;
+	char p[] = "_putchar";
 
-	for (i = 0; i < 8; i++)
+	for (c = 0; c < 9; c++)
 	{
-		putchar(myString[i]);
+		putchar(p[c]);
 	}
 	putchar('\n');
+
 	return (0);
 }
