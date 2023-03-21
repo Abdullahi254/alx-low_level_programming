@@ -2,9 +2,8 @@
 /**
  *print_alphabet - Prints alphabets in lowercase
  *
- *Return: Always 0 (Success)
  */
-int print_alphabet(void)
+void print_alphabet(void)
 {
 	char letter;
 
@@ -15,6 +14,4 @@ int print_alphabet(void)
 		letter++;
 	}
 	_putchar('\n');
-
-	return (0);
 }
