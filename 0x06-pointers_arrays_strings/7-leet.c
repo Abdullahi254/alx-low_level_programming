@@ -1,28 +1,41 @@
-#include "holberton.h"
-
 /**
- * leet - Encodes a string in 1337
- *
- * @str: String to be encoded
- *
- * Return: Always 0.
+ * leet - Encodes a string into 1337
+ * @str: The string to be encoded
+ * Return: A pointer to the encoded string
  */
 char *leet(char *str)
 {
-	int a = 0;
-	int b;
-	char s[] = "aAeEoOtTlL";
-	char s1[] = "4433007711";
+	char *orig = str;
+	char *leet = str;
+	char c;
 
-	for (; str[a] != '\0'; a++)
+	while ((c = *str++))
 	{
-		for (b = 0; b <= 9; b++)
+		if (c == 'a' || c == 'A')
 		{
-			if (s[b] == str[a])
-			{
-				str[a] = s1[b];
-			}
+			*leet++ = '4';
+		}
+		else if (c == 'e' || c == 'E')
+		{
+			*leet++ = '3';
+		}
+		else if (c == 'o' || c == 'O')
+		{
+			*leet++ = '0';
+		}
+		else if (c == 't' || c == 'T')
+		{
+			*leet++ = '7';
+		}
+		else if (c == 'l' || c == 'L')
+		{
+			*leet++ = '1';
+		}
+		else
+		{
+			*leet++ = c;
 		}
 	}
-	return (str);
+	*leet = '\0';
+	return (orig);
 }
