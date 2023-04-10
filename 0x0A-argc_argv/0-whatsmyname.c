@@ -1,12 +1,21 @@
 #include <stdio.h>
 /**
- * main - entery point
- * @argc: conter param
- * @argv: argument vector
- * Return: always 0
+ *main - prints file name
+ *@argc: argument count
+ *@argv: argument vector
+ *DESCRIPTION: prints file name
+ *Return: Always (0) Success
  */
-int main(int argc, char **argv)
+
+int main(int argc, char *argv[])
 {
-	printf("%s\n", *argv);
+	int i;
+
+	i = 0;
+	while (i < argc)
+	{
+		printf("%s\n", argv[0]);
+		i++;
+	}
 	return (0);
 }
