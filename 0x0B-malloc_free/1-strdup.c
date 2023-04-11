@@ -7,22 +7,20 @@
  */
 char *_strdup(char *str)
 {
-int i, size;
-char *a;
-if (str == NULL)
-return (NULL);
+	int len, i;
+	char *new_str;
 
-for (size = 0; str[size] != '\0'; size++)
-{
-a = malloc(size * sizeof(*str) + 1);
-/** +1 on size puts the end of string car*/
-if (a == 0)
-return (NULL);
-else
-{
-for (i = 0; i <= size; i++)
-a[i] = str[i];
-}
-}
-return (a);
+	if (str == NULL)
+		return (NULL);
+	len = 0;
+	while (str[len] != '\0')
+		len++;
+	new_str = malloc(len + 1);
+	if (new_str == NULL)
+		return (NULL);
+	for (i = 0; i <= len; i++)
+	{
+		new_str[i] = str[i];
+	}
+	return (new_str);
 }
