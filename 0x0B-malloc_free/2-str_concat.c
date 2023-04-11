@@ -1,40 +1,46 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * str_concat - contcats two string
- * @s1: string parma 1
- * @s2: string param 2
- * Return: pointer or null
+ * _strlen - find length of a string
+ * @s: string
+ * Return: int
  */
+
+
+int _strlen(char *s)
+{
+	int size = 0;
+	for (; s[size] != '\0'; size++)
+		;
+	return (size);
+}
+
+/**
+ * *str_concat - concatenates two strings
+ * @s1: string 1
+ * @s2: string 2
+ * Return: pointer
+ */
+
 char *str_concat(char *s1, char *s2)
 {
-	int i, j, k, l;
-	char *new_str;
 
-	if (s1 == NULL || s2 == NULL)
+	int size1 = _strlen(s1), size2 = _strlen(s2), i;
+	char *m = malloc((size1 + size2) * sizeof(char) + 1);
+	if (m == NULL)
 		return (NULL);
-	i = 0;
-	while (s1[i] != '\0')
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+
+	for (i = 0; i <= size1 + size2; i++)
 	{
-		i++;
+		if (i < size1)
+			m[i] = s1[i];
+		else
+			m[i] = s2[i - size1];
 	}
-	j = 0;
-	while (s2[j] != '\0')
-	{
-		j++;
-	}
-	new_str = malloc(i + j + 1);
-	if (new_str == NULL)
-		return (NULL);
-	for (k = 0; k < i; k++)
-	{
-		new_str[k] = s1[k];
-	}
-	i = 0;
-	for (l = k; l <= (k + j); l++)
-	{
-		new_str[l] = s2[i];
-		i++;
-	}
-	return (new_str);
+
+	return (m);
 }
