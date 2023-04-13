@@ -21,7 +21,7 @@ char *copy_word(char *str, int start, int end)
 	char *word;
 	int i;
 
-	word = malloc(sizeof(char) *(end - start + 1));
+	word = malloc(sizeof(char) * (end - start + 1));
 	if (word == NULL)
 		return (NULL);
 
@@ -41,7 +41,7 @@ char **strtow(char *str)
 		return (NULL);
 
 	word_count = count_words(str);
-	words = malloc(sizeof(char*) *(word_count + 1));
+	words = malloc(sizeof(char *) * (word_count + 1));
 	if (words == NULL)
 		return (NULL);
 
