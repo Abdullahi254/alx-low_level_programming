@@ -1,11 +1,13 @@
 #include "dog.h"
 /**
- * init_dog - initailizes dog struct
- * @d: pointer to dog struct
- * @name: pointer to name param
- * @age: age param
- * @owner: owner param
+ *init_dog - initialize the data structures
+ *@d: pointer to the structure
+ *@name: name member
+ *@age: age of member
+ *@owner: owner
+ *
  */
+
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
 	if (d != NULL)
