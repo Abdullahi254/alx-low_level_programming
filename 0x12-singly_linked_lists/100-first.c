@@ -1,9 +1,9 @@
 #include "lists.h"
 #include <stdio.h>
 /**
- *  liebre_tortuga -function that executes before main
+ *  print_message -function that executes before main
  **/
-void liebre_tortuga(void)
+void print_message(void)
 {
 	char *string1, *string2;
 
