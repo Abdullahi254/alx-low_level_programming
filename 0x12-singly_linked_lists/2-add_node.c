@@ -20,8 +20,24 @@ list_t *add_node(list_t **head, const char *str)
 		free(newNode);
 		return (NULL);
 	}
-	newNode->len = strlen(str);
+	newNode->len = _strlen(str);
 	newNode->next = *head;
 	*head = newNode;
 	return (newNode);
+}
+/**
+ *_strlen - returns the length ofa string
+ *@s: pointer to a string
+ *Return: string length
+ */
+int _strlen(const char *s)
+{
+	int a;
+	int len;
+
+	for (a = 0; s[a] != '\0'; a++)
+	{
+		len++;
+	}
+	return (a);
 }
