@@ -15,7 +15,7 @@ typedef struct my_double_linked
 {
 	int n;
 	struct my_double_linked *prev;
-	struct my_double_linled *next;
+	struct my_double_linked *next;
 } dlistint_t;
 
 size_t print_dlistint(const dlistint_t *h);
